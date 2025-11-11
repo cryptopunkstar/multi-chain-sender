@@ -307,19 +307,23 @@ const MultiChainSender = () => {
   const tokenAddresses = {
     'ethereum-sepolia': {
       USDC: '0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238',
-      EURC: '0x08210F9170F89ab7658f0B5694CA3A0C0ff9c7FD'
+      EURC: '0x08210F9170F89ab7658f0B5694CA3A0C0ff9c7FD',
+      USDY: '0xB559f2f3a86289ccde145b08f6b50c711169ef3C7'
     },
     'base-sepolia': {
       USDC: '0x036CbD53842c5426634e7929541eC2318f3dCF7e',
-      EURC: '0x6B635C3a0E3D9C221433cEd8B76109b637335859'
+      EURC: '0x6B635C3a0E3D9C221433cEd8B76109b637335859',
+      USDY: '0x4e65FE4DbA92f6b9cb9bFD8d6b60ec41a00108379D'
     },
     'avalanche-fuji': {
       USDC: '0x5425890298aed601595a70AB815c96711a756ADe',
-      EURC: '0xa7D1435604C7086A55b0e5B1AF63242482bDa53F'
+      EURC: '0xa7D1435604C7086A55b0e5B1AF63242482bDa53F',
+      USDY: '0x260Bbf5994Bd8215F7a3C4E1b4453b76716d6d4e'
     },
     'arc-testnet': {
       USDC: '0x4425D26d55Cc6f8C3872f9F88E4b6e9CcbF91196',
-      EURC: '0x7d6e1B5A1E3f9e4a6b0d6e1F1f2e3d4c5a6b7c8d'
+      EURC: '0x7d6e1B5A1E3f9e4a6b0d6e1F1f2e3d4c5a6b7c8d',
+      USDY: '0x3e622317f8B1effBfeEd11dAE6a3aCd5d40D3d87'
     }
   };
 
@@ -420,7 +424,7 @@ const MultiChainSender = () => {
             <div className="icon-box">
               <Send />
             </div>
-            <img src={myImage} alt="Mw3" height="200" />
+   <img src={myImage} alt="Mw3" height="200" />
             <h1>Multi-Chain Sender</h1>
           </div>
 
@@ -468,7 +472,7 @@ const MultiChainSender = () => {
             <div className="section">
               <label className="label">Select Token</label>
               <div className="button-group">
-                {['USDC', 'EURC'].map(t => (
+                {['USDC', 'EURC', 'USDY'].map(t => (
                   <button
                     key={t}
                     className={`token-btn ${token === t ? 'active' : 'inactive'}`}
